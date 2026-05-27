@@ -9,7 +9,7 @@ function App() {
   const [entrance, setEntrance] = useState('front');
 
   return (
-    <BrowserRouter basename="/<navigation-project>">
+    <BrowserRouter basename="/navigation-project">
       <div className="App">
         <Routes>
           <Route path="/" element={<MainMenu setEntrance={setEntrance} />} />
