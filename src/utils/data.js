@@ -1,8 +1,8 @@
 // Загружает данные из JSON и объединяет с сохранёнными в localStorage правками админа
 export async function loadData() {
-  const response = await fetch('/data.json');
+  const response = await fetch('./data.json');
   const defaultData = await response.json();
-  
+
   const saved = localStorage.getItem('hospitalData');
   if (saved) {
     const userData = JSON.parse(saved);
