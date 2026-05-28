@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import MainMenu from './components/MainMenu';
 import FloorPlan from './components/FloorPlan';
 import AdminPanel from './components/AdminPanel';
 import './styles/App.css';
 
 function App() {
-  const [entrance, setEntrance] = useState('front');
-
   return (
-    <BrowserRouter basename="/navigation-project">
+    <HashRouter>  {/* Убираем basename */}
       <div className="App">
         <Routes>
           <Route path="/" element={<MainMenu setEntrance={setEntrance} />} />
@@ -17,7 +15,7 @@ function App() {
           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
