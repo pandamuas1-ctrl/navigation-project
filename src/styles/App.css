@@ -3,15 +3,32 @@ body {
   margin: 0;
   padding: 20px;
   background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.main-menu, .floor-plan, .admin-panel, .admin-login {
+.main-menu,
+.floor-plan,
+.admin-panel,
+.admin-login {
   max-width: 800px;
   margin: 0 auto;
   background: white;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 80vh;
+}
+
+.main-menu {
+  text-align: center;
+}
+
+.main-menu h1,
+.main-menu p {
+  text-align: center;
 }
 
 .buttons {
@@ -32,36 +49,52 @@ button {
   cursor: pointer;
   transition: 0.2s;
 }
+
 button:hover {
   background: #003f80;
 }
+
 .admin-btn {
   background: #6c757d;
 }
+
 .floor-tabs {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 20px;
+  justify-content: center;
 }
+
+.floor-tabs button {
+  flex: 0 1 auto;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
 .floor-tabs button.active {
   background: #ff8c00;
 }
+
 .search-bar {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
+
 .search-bar input {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 30px;
 }
+
 .cabinet-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 12px;
 }
+
 .cabinet-card {
   background: #e9ecef;
   padding: 12px;
@@ -70,19 +103,25 @@ button:hover {
   cursor: pointer;
   transition: 0.1s;
 }
+
 .cabinet-card:hover {
   background: #dee2e6;
   transform: scale(1.02);
 }
+
 .drawer-overlay {
   position: fixed;
-  top:0; left:0; right:0; bottom:0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
+
 .drawer {
   background: white;
   width: 90%;
@@ -92,27 +131,47 @@ button:hover {
   position: relative;
   animation: slideUp 0.3s;
 }
+
 .close-btn {
   position: absolute;
-  top: 10px; right: 15px;
+  top: 10px;
+  right: 15px;
   background: gray;
   padding: 5px 10px;
   border-radius: 50%;
 }
+
 @keyframes slideUp {
-  from { transform: translateY(100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+
 .admin-panel table {
   width: 100%;
   border-collapse: collapse;
 }
-.admin-panel td, .admin-panel th {
+
+.admin-panel td,
+.admin-panel th {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
 }
+
 .admin-panel input {
   width: 100%;
   padding: 5px;
+}
+
+@media (max-width: 480px) {
+  .buttons button {
+    width: 100%;
+  }
 }
