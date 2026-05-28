@@ -6,8 +6,10 @@ import AdminPanel from './components/AdminPanel';
 import './styles/App.css';
 
 function App() {
+  const [entrance, setEntrance] = useState('front');
+
   return (
-    <HashRouter>  {/* Убираем basename */}
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<MainMenu setEntrance={setEntrance} />} />
