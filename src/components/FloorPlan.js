@@ -3,8 +3,7 @@ import { loadData, findCabinetsByDoctor } from '../utils/data';
 import CabinetDetail from './CabinetDetail';
 
 export default function FloorPlan({ entrance }) {
-  const basename = window.location.pathname.split('/')[1];
-  const imgPath = `/${basename}/images/floors/floor${currentFloor}.png`;
+  // Сначала все состояния
   const [data, setData] = useState({ floors: [], cabinets: [] });
   const [currentFloor, setCurrentFloor] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,10 +11,12 @@ export default function FloorPlan({ entrance }) {
   const [selectedCabinet, setSelectedCabinet] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  // Загрузка данных
   useEffect(() => {
     loadData().then(setData);
   }, []);
 
+  // Обработчики
   const handleSearch = () => {
     if (searchTerm.trim() === '') {
       setSearchResults([]);
@@ -78,12 +79,14 @@ export default function FloorPlan({ entrance }) {
           </div>
         </div>
       )}
+
+      {/* Отображение плана этажа */}
       <div className="floor-plan-image">
         <img
           src={`/navigation-project/images/floors/floor${currentFloor}.png`}
           alt={`План ${currentFloor} этажа`}
           style={{ width: '100%', borderRadius: '12px', marginBottom: '20px' }}
-          onError={(e) => { e.target.style.display = 'none' }} // скрыть, если файла нет
+          onError={(e) => { e.target.style.display = 'none' }}
         />
       </div>
 
