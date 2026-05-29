@@ -6,8 +6,20 @@
     { "number": 4, "name": "Четвёртый этаж" }
   ],
   "cabinets": [
-    { "id": 101, "floor": 1, "doctor": "Иванова А.А. (терапевт)", "routeFromFront": "Налево, второй коридор, кабинет 101", "routeFromRegistry": "Прямо, мимо стойки, направо", "routeFromBack": "Вверх по лестнице, налево" },
-    { "id": 113, "floor": 1, "doctor": "Петров В.И. (хирург)", "routeFromFront": "Прямо до лифта, налево, 113", "routeFromRegistry": "Направо, первый поворот", "routeFromBack": "Вход, налево, 113" },
-    { "id": 420, "floor": 4, "doctor": "Сидорова М.Н. (невролог)", "routeFromFront": "Лифт на 4 этаж, направо, до конца", "routeFromRegistry": "Лифт на 4, затем прямо", "routeFromBack": "Лестница на 4, налево" }
-  ]
-}
+    { "id": 101, "floor": 1, "doctor": "Психиатр", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 102, "floor": 1, "doctor": "Психиатр-нарколог", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 103, "floor": 1, "doctor": "Психотерапевт", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 108, "floor": 1, "doctor": "Врач педиатор. Участок № 11", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 110, "floor": 1, "doctor": "Врач педиатр. Участок № 10", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 127, "floor": 1, "doctor": "Хирург, травматолог-ортопед", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 131, "floor": 1, "doctor": "Акушер - гинеколог", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 136, "floor": 1, "doctor": "Врач инфекционист", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 133, "floor": 1, "doctor": "Кабинет диагностики", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 310, "floor": 3, "doctor": "Врач - физиотерапевт", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 314, "floor": 3, "doctor": "Кабинет массажа", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 317, "floor": 3, "doctor": "Псилохог", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 325, "floor": 3, "doctor": "Заведующий отделением восстановительного лечения", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },
+    { "id": 402, "floor": 4, "doctor": "Приёмная", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" },        
+    { "id": 406, "floor": 4, "doctor": "Стоматологический кабинет", "routeFromFront": "", "routeFromRegistry": "", "routeFromBack": "" }
+   ]
+  }
